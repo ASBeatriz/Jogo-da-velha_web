@@ -1,0 +1,23 @@
+table td:hover {
+    background-color: rgb(201, 207, 212);
+    cursor: pointer;
+}
+table {
+    background-color: rgb(226, 228, 229);
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border-style: hidden;
+    border-radius: 10px;
+}
+td, tr {
+    border: 1px solid rgb(118, 118, 118);
+    width: 100px;
+    height: 100px;
+}
+#c00 {border-top-left-radius: 10px;}
+#c02 {border-top-right-radius: 10px;}
+#c20 {border-bottom-left-radius: 10px;}
+#c22 {border-bottom-right-radius: 10px;}
