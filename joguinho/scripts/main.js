@@ -110,10 +110,10 @@ function imprime_jogador(){
 function seleciona(id){
     if(!jogo) return;
 
-    jogadas++;
     const x = id[1];
     const y = id[2];
     if((tabela[x][y]).vazio()){
+        jogadas++;
         (tabela[x][y]).preenche(id);
         if(verificaVitoria() != ' '){
             telaVencedor(verificaVitoria());
