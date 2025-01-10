@@ -8,30 +8,50 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h2 style="text-align: center; font-size: 40px;">Joguinho da velha</h2>
+    <h2>Joguinho da velha</h2>
+    
+    <div id="jogador">Jogador Atual: </div>
+    <div id="conteiner">
+        <div id="div-jogo">
+            <table cellspacing="0" id="tabela-jogo">
+                <tr>
+                    <td id="c00" onclick="seleciona('c00')"></td>
+                    <td id="c01" onclick="seleciona('c01')"></td>
+                    <td id="c02" onclick="seleciona('c02')"></td>
+                </tr>
+                <tr>
+                    <td id="c10" onclick="seleciona('c10')"></td>
+                    <td id="c11" onclick="seleciona('c11')"></td>
+                    <td id="c12" onclick="seleciona('c12')"></td>
+                </tr>
+                <tr>
+                    <td id="c20" onclick="seleciona('c20')"></td>
+                    <td id="c21" onclick="seleciona('c21')"></td>
+                    <td id="c22" onclick="seleciona('c22')"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="pontuacao"> 
+            <table id="tabela-pontuacao" cellspacing="0">
+            <tr>
+                    <td colspan="2">Pontuação</td>
+                </tr>
+                <tr>
+                    <td>X</td>
+                    <td>O</td>
+                </tr>
+                <tr>
+                    <td id="pontosX"></td>
+                    <td id="pontosO"></td>
+                </tr>
+            </table>
 
-    <div>
-        <table cellspacing="0">
-            <tr>
-                <td id="c00" onclick="seleciona('c00')"></td>
-                <td id="c01" onclick="seleciona('c01')"></td>
-                <td id="c02" onclick="seleciona('c02')"></td>
-            </tr>
-            <tr>
-                <td id="c10" onclick="seleciona('c10')"></td>
-                <td id="c11" onclick="seleciona('c11')"></td>
-                <td id="c12" onclick="seleciona('c12')"></td>
-            </tr>
-            <tr>
-                <td id="c20" onclick="seleciona('c20')"></td>
-                <td id="c21" onclick="seleciona('c21')"></td>
-                <td id="c22" onclick="seleciona('c22')"></td>
-            </tr>
-        </table>
+            <button id="reset-pontos" onclick="reset_pontos()">RESETAR PONTOS</button>
+        </div>
     </div>
     <div id="resultado"></div>
     <div>
-        <button id="reset" onclick="reset()">RESETAR</button>
+        <button id="reset-jogo" onclick="reset()">RESETAR JOGO</button>
     </div>
     
     <script src="scripts/main.js"></script>

@@ -1,7 +1,9 @@
-var player = (Math.random() < 0.5 ? false : true);  // randomiza o primeiro player
+var player; // true = X, false = O 
 var tabela;
 var jogo = true;
 var jogadas = 0;
+var x_pont = 0;
+var o_pont = 0;
 
 class Campo {
     // Propriedades
@@ -90,11 +92,19 @@ function verificaVelha(){
 function telaVencedor(vencedor){
     var div = document.getElementById('resultado');
     div.textContent = ('Vencedor: ' + vencedor);
+    pontua(vencedor);
 }
 
 function telaVelha(){
     var div = document.getElementById('resultado');
     div.textContent = ('Deu velha!');
+}
+
+function imprime_jogador(){
+    let next;
+    if(jogo) next = player ? 'X':'O';
+    else next = '';
+    document.getElementById('jogador').textContent = 'Jogador Atual: ' + next;
 }
 
 function seleciona(id){
@@ -114,6 +124,7 @@ function seleciona(id){
             jogo = false;
         }
     }
+    imprime_jogador();
 }
 
 function reset(){
@@ -132,4 +143,31 @@ function reset(){
     jogo = true;
     jogadas = 0;
     player = (Math.random() < 0.5 ? false : true);
+    imprime_jogador();
 }
+
+function reset_pontos(){
+    x_pont = 0;
+    o_pont = 0;
+    document.getElementById('pontosX').textContent = x_pont;
+    document.getElementById('pontosO').textContent = o_pont;
+}
+
+function pontua(vencedor){
+    if(vencedor == 'X'){
+        x_pont++;
+        document.getElementById('pontosX').textContent = x_pont;
+    }
+    else{
+        o_pont++;
+        document.getElementById('pontosO').textContent = o_pont;
+    }
+}
+
+// inicia o jogo já exibindo a pontuação
+(function (){
+    player = (Math.random() < 0.5 ? false : true); // randomiza o primeiro player
+    imprime_jogador();
+    document.getElementById('pontosX').textContent = x_pont;
+    document.getElementById('pontosO').textContent = o_pont;
+})()

@@ -1,22 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
 
-table td:hover {
+*{
+    box-sizing: border-box;
+}
+
+h2{
+    text-align: center;
+    font-family: "Jersey 10", serif;    
+    font-weight: normal;
+    font-size: 55px;
+    margin: 15px;
+}
+
+#jogador{
+    text-align: center;
+    font-family: "Jersey 10", serif;
+    font-size: 37px;
+}
+
+#tabela-jogo td:hover {
     background-color: rgb(201, 207, 212);
     cursor: pointer;
 }
-table {
+#tabela-jogo {
     background-color: rgb(226, 228, 229);
     width: 300px;
     height: 300px;
-    margin-left: auto;
-    margin-right: auto;
     border-collapse: collapse;
     border-style: hidden;
     border-radius: 10px;
     font-family: "Jersey 10", serif;
     font-size: 50px;
 }
-td{
+#tabela-jogo td{
     border: 1px solid rgb(118, 118, 118);
     width: 100px;
     height: 100px;
@@ -28,15 +44,16 @@ td{
 #c22 {border-bottom-right-radius: 10px;}
 
 #resultado{
-    height: 50px;
+    height: 80px;
     margin: auto;
     display: flex;
     justify-content: center;
     font-family: "Jersey 10", serif;
     font-size: 50px;
+    color: #23bad1;
 }
 
-#reset{
+#reset-jogo{
     margin: auto;
     display: flex;
     justify-content: center;
@@ -47,6 +64,52 @@ td{
     font-size: 30px;
 }
 
+#reset-pontos{
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+
+    font-family: "Jersey 10", serif;
+    font-size: 25px;
+}
+
 div{
     padding: 20px;
+}
+
+#conteiner{
+    display: flex;
+    padding: 0;
+}
+
+#pontuacao{
+    /* width: 38%; */
+    margin-left: 5vw;
+    justify-content: center;
+    text-align: center;
+}
+
+#div-jogo{
+    width: 62%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#tabela-pontuacao{
+    background-color: rgb(226, 228, 229);
+    width: 30vw;
+    min-width: 100px;
+    max-width: 250px;
+    height: 150px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    font-family: "Jersey 10", serif;
+    font-size: 30px;
+}
+
+#pontosX, #pontosO{
+    color: #23bad1;
 }
