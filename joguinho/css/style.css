@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
 table td:hover {
     background-color: rgb(201, 207, 212);
     cursor: pointer;
@@ -11,13 +13,40 @@ table {
     border-collapse: collapse;
     border-style: hidden;
     border-radius: 10px;
+    font-family: "Jersey 10", serif;
+    font-size: 50px;
 }
-td, tr {
+td{
     border: 1px solid rgb(118, 118, 118);
     width: 100px;
     height: 100px;
+    text-align: center;
 }
 #c00 {border-top-left-radius: 10px;}
 #c02 {border-top-right-radius: 10px;}
 #c20 {border-bottom-left-radius: 10px;}
 #c22 {border-bottom-right-radius: 10px;}
+
+#resultado{
+    height: 50px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    font-family: "Jersey 10", serif;
+    font-size: 50px;
+}
+
+#reset{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+
+    font-family: "Jersey 10", serif;
+    font-size: 30px;
+}
+
+div{
+    padding: 20px;
+}

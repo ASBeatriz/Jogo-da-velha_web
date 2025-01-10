@@ -10,22 +10,30 @@
 <body>
     <h2 style="text-align: center; font-size: 40px;">Joguinho da velha</h2>
 
-    <table cellspacing="0">
-        <tr>
-            <td id="c00"></td>
-            <td id="c01"></td>
-            <td id="c02"></td>
-        </tr>
-        <tr>
-            <td id="c10"></td>
-            <td id="c11"></td>
-            <td id="c12"></td>
-        </tr>
-        <tr>
-            <td id="c20"></td>
-            <td id="c21"></td>
-            <td id="c22"></td>
-        </tr>
-    </table>
+    <div>
+        <table cellspacing="0">
+            <tr>
+                <td id="c00" onclick="seleciona('c00')"></td>
+                <td id="c01" onclick="seleciona('c01')"></td>
+                <td id="c02" onclick="seleciona('c02')"></td>
+            </tr>
+            <tr>
+                <td id="c10" onclick="seleciona('c10')"></td>
+                <td id="c11" onclick="seleciona('c11')"></td>
+                <td id="c12" onclick="seleciona('c12')"></td>
+            </tr>
+            <tr>
+                <td id="c20" onclick="seleciona('c20')"></td>
+                <td id="c21" onclick="seleciona('c21')"></td>
+                <td id="c22" onclick="seleciona('c22')"></td>
+            </tr>
+        </table>
+    </div>
+    <div id="resultado"></div>
+    <div>
+        <button id="reset" onclick="reset()">RESETAR</button>
+    </div>
+    
+    <script src="scripts/main.js"></script>
 </body>
 </html>
